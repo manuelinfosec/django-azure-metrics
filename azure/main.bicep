@@ -4,7 +4,7 @@ targetScope = 'subscription'
 param rgLocation string
 
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
-  name: 'rg-myapp'
+  name: 'rg-azure-tracer'
   location: rgLocation
 }
 
