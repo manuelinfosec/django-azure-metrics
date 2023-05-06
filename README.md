@@ -1,14 +1,10 @@
 # Django Metrics with Azure Application Insights
 
-Django REST API sending telemetry to Azure Application Insights from reference [sample][3].
-
-Implement [Cloud_RoleName][2] tags for microservices.
-
-> Live metrics is not supported at this time
+Django REST API sending telemetry to Azure Application Insights from [sample][3].
 
 <img src=".docs/metrics.png" width=500 />
 
-Install the dependencies:
+Install the packages:
 
 ```sh
 poetry install
@@ -21,7 +17,7 @@ Make sure to upgrade Bicep:
 az bicep upgrade
 ```
 
-Create the Azure Resources:
+Create the Azure Resource from Bicep:
 
 ```sh
 az deployment sub create \
@@ -30,7 +26,7 @@ az deployment sub create \
     --parameters rgLocation=brazilsouth
 ```
 
-To get the Application Insights connection string:
+To find the Application Insights connection string:
 
 ```sh
 az monitor app-insights component show --app 'appi-myapp' -g 'rg-myapp' --query 'connectionString' -o tsv
