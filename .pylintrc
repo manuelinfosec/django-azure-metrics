@@ -1,0 +1,5 @@
+[MASTER]
+load-plugins=pylint_django
+django-settings-module=wl1_python_django.settings
+disable=
+    C0114, C0115, C0116, C0103, W0622
