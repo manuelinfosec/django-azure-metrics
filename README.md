@@ -42,7 +42,7 @@ Apply the migrations and start the server to start sending telemetry.
 
 ```sh
 python manage.py migrate
-python manage.py runserver --noreload
+python manage.py runserver
 ```
 
 Additional examples [here][4] and [here][5].
